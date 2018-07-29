@@ -1,0 +1,420 @@
+object Form1: TForm1
+  Left = -8
+  Height = 705
+  Top = -8
+  Width = 1366
+  Caption = 'Form1'
+  ClientHeight = 705
+  ClientWidth = 1366
+  OnCreate = FormCreate
+  LCLVersion = '1.8.0.4'
+  object Panel1: TPanel
+    Left = 0
+    Height = 593
+    Top = 112
+    Width = 256
+    Align = alLeft
+    Alignment = taLeftJustify
+    ClientHeight = 593
+    ClientWidth = 256
+    TabOrder = 0
+    OnClick = Panel1Click
+    object PairSplitter2: TPairSplitter
+      Cursor = crVSplit
+      Left = 1
+      Height = 591
+      Top = 1
+      Width = 254
+      Align = alClient
+      Position = 240
+      SplitterType = pstVertical
+      object PairSplitterSide3: TPairSplitterSide
+        Cursor = crArrow
+        Left = 0
+        Height = 240
+        Top = 0
+        Width = 254
+        ClientWidth = 254
+        ClientHeight = 240
+        object CDButton1: TCDButton
+          Left = 88
+          Height = 25
+          Top = 0
+          Width = 75
+          Caption = 'CDButton1'
+          DrawStyle = dsDefault
+          OnClick = CDButton1Click
+          TabOrder = 0
+          TabStop = True
+        end
+        object Panel7: TPanel
+          Left = 32
+          Height = 136
+          Top = 64
+          Width = 194
+          ClientHeight = 136
+          ClientWidth = 194
+          TabOrder = 1
+          object colorbtnFunction: TColorButton
+            Left = 72
+            Height = 25
+            Top = 11
+            Width = 100
+            BorderWidth = 2
+            ButtonColorSize = 16
+            ButtonColor = clBlue
+            Color = clHotLight
+          end
+          object TrackBar1: TTrackBar
+            Left = 72
+            Height = 32
+            Top = 58
+            Width = 100
+            Max = 4
+            Min = 1
+            Position = 1
+            Color = clHotLight
+            Font.Color = clHighlight
+            ParentColor = False
+            ParentFont = False
+            TabOrder = 0
+          end
+          object StaticText1: TStaticText
+            Left = 16
+            Height = 20
+            Top = 16
+            Width = 43
+            AutoSize = True
+            BorderStyle = sbsSingle
+            Caption = 'COLOR'
+            Font.Color = clBlue
+            ParentBidiMode = False
+            ParentFont = False
+            TabOrder = 1
+          end
+          object StaticText2: TStaticText
+            Left = 16
+            Height = 20
+            Top = 58
+            Width = 42
+            AutoSize = True
+            BorderStyle = sbsSingle
+            Caption = 'WIDTH'
+            Color = clRed
+            Font.Color = clBlue
+            ParentFont = False
+            ParentColor = False
+            TabOrder = 2
+          end
+        end
+      end
+      object PairSplitterSide4: TPairSplitterSide
+        Cursor = crArrow
+        Left = 0
+        Height = 346
+        Top = 245
+        Width = 254
+        ClientWidth = 254
+        ClientHeight = 346
+        object ValueListEditor1: TValueListEditor
+          Left = 0
+          Height = 346
+          Top = 0
+          Width = 254
+          Align = alClient
+          DefaultColWidth = 120
+          FixedCols = 0
+          RowCount = 2
+          TabOrder = 0
+          ColWidths = (
+            120
+            130
+          )
+        end
+      end
+    end
+  end
+  object Panel2: TPanel
+    Left = 1104
+    Height = 593
+    Top = 112
+    Width = 262
+    Align = alRight
+    Alignment = taLeftJustify
+    ClientHeight = 593
+    ClientWidth = 262
+    TabOrder = 1
+    object pgcRight: TPageControl
+      Left = 1
+      Height = 591
+      Top = 1
+      Width = 260
+      ActivePage = tshVariables
+      Align = alClient
+      TabIndex = 0
+      TabOrder = 0
+      object tshVariables: TTabSheet
+        Caption = 'Variables'
+        ClientHeight = 563
+        ClientWidth = 252
+        object PairSplitter1: TPairSplitter
+          Cursor = crVSplit
+          Left = 0
+          Height = 563
+          Top = 0
+          Width = 252
+          Align = alClient
+          Position = 216
+          SplitterType = pstVertical
+          object PairSplitterSide1: TPairSplitterSide
+            Cursor = crArrow
+            Left = 0
+            Height = 216
+            Top = 0
+            Width = 252
+            ClientWidth = 252
+            ClientHeight = 216
+            object Label1: TLabel
+              Left = 0
+              Height = 15
+              Top = 0
+              Width = 252
+              Align = alTop
+              Alignment = taCenter
+              Caption = 'Variables Ingresadas'
+              Color = clActiveBorder
+              ParentColor = False
+              Transparent = False
+            end
+            object StringGrid1: TStringGrid
+              Left = 0
+              Height = 201
+              Top = 15
+              Width = 252
+              Align = alClient
+              Color = clDefault
+              ColCount = 3
+              DefaultColWidth = 83
+              FixedCols = 0
+              RowCount = 2
+              TabOrder = 0
+              Cells = (
+                3
+                0
+                0
+                '   variable'
+                1
+                0
+                '     valor'
+                2
+                0
+                '       tipo'
+              )
+            end
+          end
+          object PairSplitterSide2: TPairSplitterSide
+            Cursor = crArrow
+            Left = 0
+            Height = 342
+            Top = 221
+            Width = 252
+            ClientWidth = 252
+            ClientHeight = 342
+            object Label2: TLabel
+              Left = 0
+              Height = 15
+              Top = 0
+              Width = 252
+              Align = alTop
+              Alignment = taCenter
+              Caption = 'Historial'
+              Color = clAppWorkspace
+              ParentColor = False
+              Transparent = False
+            end
+            object Historial: TMemo
+              Left = 0
+              Height = 327
+              Top = 15
+              Width = 252
+              Align = alClient
+              Lines.Strings = (
+                'Memo2'
+              )
+              TabOrder = 0
+            end
+          end
+        end
+      end
+      object TabSheet1: TTabSheet
+        Caption = 'Comandos'
+        ClientHeight = 361
+        ClientWidth = 252
+        object Memo1: TMemo
+          Left = 0
+          Height = 361
+          Top = 0
+          Width = 252
+          Align = alClient
+          Lines.Strings = (
+            'Memo1'
+          )
+          TabOrder = 0
+        end
+      end
+    end
+  end
+  object Panel5: TPanel
+    Left = 256
+    Height = 593
+    Top = 112
+    Width = 848
+    Align = alClient
+    ClientHeight = 593
+    ClientWidth = 848
+    TabOrder = 2
+    object Panel3: TPanel
+      Left = 1
+      Height = 199
+      Top = 393
+      Width = 846
+      Align = alClient
+      Caption = 'Panel3'
+      ClientHeight = 199
+      ClientWidth = 846
+      TabOrder = 0
+      object CmdBox: TCmdBox
+        Left = 1
+        Height = 197
+        Top = 1
+        Width = 844
+        Align = alClient
+        CaretColor = clBlue
+        CaretType = cartUser
+        CaretWidth = 1
+        CaretHeight = 12
+        CaretYShift = 3
+        OnInput = CmdBoxInput
+        LineCount = 1000
+        Font.Color = clBlack
+        Font.Height = -15
+        Font.Name = 'Courier New'
+        BackGroundColor = clWhite
+        TabWidth = 60
+        HistoryMax = 20
+        InputSelColor = clBlue
+        InputSelBackGround = clWhite
+        CaretInterval = 500
+        EscapeCodeType = esctCmdBox
+        GraphicalCharacterWidth = 10
+      end
+    end
+    object Panel4: TPanel
+      Left = 1
+      Height = 392
+      Top = 1
+      Width = 846
+      Align = alTop
+      ParentColor = False
+      TabOrder = 1
+    end
+  end
+  object Panel6: TPanel
+    Left = 0
+    Height = 112
+    Top = 0
+    Width = 1366
+    Align = alTop
+    Caption = 'Panel6'
+    ClientHeight = 112
+    ClientWidth = 1366
+    TabOrder = 3
+    object SpkToolbar1: TSpkToolbar
+      Left = 1
+      Top = 1
+      Width = 1364
+      Appearance.Tab.TabHeaderFont.Color = 9126421
+      Appearance.Tab.BorderColor = 14922381
+      Appearance.Tab.GradientFromColor = 16115934
+      Appearance.Tab.GradientToColor = 15587527
+      Appearance.Tab.GradientType = bkConcave
+      Appearance.Tab.InactiveTabHeaderFontColor = 9126421
+      Appearance.Pane.BorderDarkColor = 14335646
+      Appearance.Pane.BorderLightColor = 16315117
+      Appearance.Pane.CaptionBgColor = 15849922
+      Appearance.Pane.CaptionFont.Color = 9126421
+      Appearance.Pane.GradientFromColor = 16115934
+      Appearance.Pane.GradientToColor = 15587527
+      Appearance.Pane.GradientType = bkConcave
+      Appearance.Element.IdleFrameColor = 14727067
+      Appearance.Element.IdleGradientFromColor = 15653832
+      Appearance.Element.IdleGradientToColor = 15323324
+      Appearance.Element.IdleGradientType = bkConcave
+      Appearance.Element.IdleInnerLightColor = 15852501
+      Appearance.Element.IdleInnerDarkColor = 15520702
+      Appearance.Element.IdleCaptionColor = 11631958
+      Appearance.Element.HotTrackFrameColor = 10211293
+      Appearance.Element.HotTrackGradientFromColor = 14351615
+      Appearance.Element.HotTrackGradientToColor = 5101567
+      Appearance.Element.HotTrackGradientType = bkConcave
+      Appearance.Element.HotTrackInnerLightColor = 12972543
+      Appearance.Element.HotTrackInnerDarkColor = 8045272
+      Appearance.Element.HotTrackCaptionColor = 8864367
+      Appearance.Element.HotTrackBrightnessChange = 40
+      Appearance.Element.ActiveFrameColor = 5535371
+      Appearance.Element.ActiveGradientFromColor = 7126014
+      Appearance.Element.ActiveGradientToColor = 4035324
+      Appearance.Element.ActiveGradientType = bkConcave
+      Appearance.Element.ActiveInnerLightColor = 961020
+      Appearance.Element.ActiveInnerDarkColor = 961020
+      Appearance.Element.ActiveCaptionColor = 8405614
+      Appearance.Element.Style = esRounded
+      TabIndex = 0
+      Tabs = (
+        'SpkTab1'
+      )
+      object SpkTab1: TSpkTab
+        CustomAppearance.Tab.TabHeaderFont.Color = 9126421
+        CustomAppearance.Tab.BorderColor = 14922381
+        CustomAppearance.Tab.GradientFromColor = 16115934
+        CustomAppearance.Tab.GradientToColor = 15587527
+        CustomAppearance.Tab.GradientType = bkConcave
+        CustomAppearance.Tab.InactiveTabHeaderFontColor = 9126421
+        CustomAppearance.Pane.BorderDarkColor = 14335646
+        CustomAppearance.Pane.BorderLightColor = 16315117
+        CustomAppearance.Pane.CaptionBgColor = 15849922
+        CustomAppearance.Pane.CaptionFont.Color = 9126421
+        CustomAppearance.Pane.GradientFromColor = 16115934
+        CustomAppearance.Pane.GradientToColor = 15587527
+        CustomAppearance.Pane.GradientType = bkConcave
+        CustomAppearance.Element.IdleFrameColor = 14727067
+        CustomAppearance.Element.IdleGradientFromColor = 15653832
+        CustomAppearance.Element.IdleGradientToColor = 15323324
+        CustomAppearance.Element.IdleGradientType = bkConcave
+        CustomAppearance.Element.IdleInnerLightColor = 15852501
+        CustomAppearance.Element.IdleInnerDarkColor = 15520702
+        CustomAppearance.Element.IdleCaptionColor = 11631958
+        CustomAppearance.Element.HotTrackFrameColor = 10211293
+        CustomAppearance.Element.HotTrackGradientFromColor = 14351615
+        CustomAppearance.Element.HotTrackGradientToColor = 5101567
+        CustomAppearance.Element.HotTrackGradientType = bkConcave
+        CustomAppearance.Element.HotTrackInnerLightColor = 12972543
+        CustomAppearance.Element.HotTrackInnerDarkColor = 8045272
+        CustomAppearance.Element.HotTrackCaptionColor = 8864367
+        CustomAppearance.Element.HotTrackBrightnessChange = 40
+        CustomAppearance.Element.ActiveFrameColor = 5535371
+        CustomAppearance.Element.ActiveGradientFromColor = 7126014
+        CustomAppearance.Element.ActiveGradientToColor = 4035324
+        CustomAppearance.Element.ActiveGradientType = bkConcave
+        CustomAppearance.Element.ActiveInnerLightColor = 961020
+        CustomAppearance.Element.ActiveInnerDarkColor = 961020
+        CustomAppearance.Element.ActiveCaptionColor = 8405614
+        CustomAppearance.Element.Style = esRounded
+        Caption = 'Tab'
+        OverrideAppearance = False
+        Visible = True
+        Panes = (        )
+      end
+    end
+  end
+end

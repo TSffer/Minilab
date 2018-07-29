@@ -1,0 +1,141 @@
+object Frame1: TFrame1
+  Left = 0
+  Height = 351
+  Top = 0
+  Width = 462
+  ClientHeight = 351
+  ClientWidth = 462
+  TabOrder = 0
+  DesignLeft = 587
+  DesignTop = 451
+  object chrGrafica: TChart
+    Left = 0
+    Height = 328
+    Top = 0
+    Width = 462
+    AxisList = <    
+      item
+        Grid.Color = clSilver
+        Minors = <>
+        Title.LabelFont.Orientation = 900
+      end    
+      item
+        Grid.Color = clSilver
+        Intervals.Count = 1
+        Intervals.MinLength = -50
+        Alignment = calBottom
+        Minors = <>
+        Position = 5
+      end>
+    BackColor = clWhite
+    Foot.Brush.Color = clBtnFace
+    Foot.Font.Color = clBlue
+    Title.Brush.Color = clBtnFace
+    Title.Font.Color = clBlue
+    Title.Text.Strings = (
+      'TAChart'
+    )
+    Toolset = ChartToolset1
+    Align = alClient
+    object EjeX: TConstantLine
+      Arrow.BaseLength = 6
+      Arrow.Visible = True
+      Position = 0
+      Title = 'Eje X'
+    end
+    object EjeY: TConstantLine
+      Arrow.BaseLength = 6
+      Arrow.Visible = True
+      LineStyle = lsVertical
+      Position = 0
+    end
+    object Plotear: TLineSeries
+      Active = False
+      LinePen.Color = clLime
+    end
+    object Funcion: TFuncSeries
+      Active = False
+      Extent.UseXMax = True
+      Extent.UseXMin = True
+      Extent.XMax = -5
+      Extent.XMin = 5
+      ExtentAutoY = True
+    end
+    object Area: TAreaSeries
+      Transparency = 150
+      Active = False
+      Title = 'Area'
+      AxisIndexY = 0
+      AreaBrush.Color = clHotLight
+      AreaContourPen.Color = clRed
+      AreaContourPen.Style = psDot
+      AreaContourPen.Width = 3
+      AreaLinesPen.Style = psClear
+      UseZeroLevel = True
+    end
+    object Plotear2: TLineSeries
+      LinePen.Color = clBlue
+    end
+    object GraficaPoints: TLineSeries
+      Shadow.Color = clRed
+      Marks.Format = '%0:.9g'
+      Marks.Style = smsValue
+      LinePen.Color = clRed
+      LinePen.Width = 2
+      Pointer.HorizSize = 7
+      Pointer.Style = psCircle
+      Pointer.VertSize = 7
+      ShowPoints = True
+    end
+    object GraficaPoints2: TLineSeries
+      LinePen.Width = 2
+      Pointer.Style = psCircle
+      ShowPoints = True
+    end
+    object grafico1: TLineSeries
+      LinePen.Color = clBlue
+      OnCustomDrawPointer = grafico1CustomDrawPointer
+    end
+    object grafico2: TLineSeries
+      Tag = 1
+      LinePen.Color = clRed
+    end
+    object grafico3: TLineSeries
+      Tag = 2
+      LinePen.Color = clYellow
+    end
+    object grafico4: TLineSeries
+      Tag = 3
+      LinePen.Color = clLime
+    end
+    object grafico5: TLineSeries
+      Tag = 4
+      LinePen.Color = clGreen
+    end
+    object grafico6: TLineSeries
+      Tag = 5
+      LinePen.Color = clPurple
+    end
+    object grafico7: TLineSeries
+      Tag = 6
+    end
+  end
+  object StatusBar1: TStatusBar
+    Left = 0
+    Height = 23
+    Top = 328
+    Width = 462
+    Panels = <>
+  end
+  object ChartToolset1: TChartToolset
+    left = 192
+    top = 168
+    object ChartToolset1DataPointClickTool1: TDataPointClickTool
+      Shift = [ssLeft]
+      OnPointClick = ChartToolset1DataPointClickTool1PointClick
+    end
+    object ChartToolset1ZoomMouseWheelTool1: TZoomMouseWheelTool
+      ZoomFactor = 1.1
+    end
+  end
+end
